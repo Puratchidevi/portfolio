@@ -1,0 +1,229 @@
+/* 
+body {
+  background:#111;
+  font-family: sans-serif;
+}
+
+.about-container {
+  padding: 80px;
+  color: #fff;
+  text-align: center;
+}
+
+.about-container span {
+  color: orange;
+}
+
+.about-card {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px;
+  background: linear-gradient(135deg,#222,#333);
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+}
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.timeline-item {
+  background:#222;
+  padding: 20px;
+  border-left: 4px solid orange;
+  width: 220px;
+} */
+ /* FULL PAGE COVER */
+.about-section{
+  height:100vh;
+  background:linear-gradient(180deg,#111,#1c1c1c);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  color:#fff;
+}
+
+/* CONTAINER */
+.about-container{
+  width:90%;
+  max-width:1200px;
+  display:flex;
+  gap:60px;
+  align-items:center;
+}
+
+/* LEFT SIDE */
+.about-left{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  animation:slideLeft 1.2s ease forwards;
+}
+
+/* CIRCLE DESIGN */
+.about-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* RING */
+.image-ring{
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  padding: 6px;
+  background: lab(71.9% 21.24 75.43);
+  animation: pulse 2s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE */
+.image-ring img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;   /* 🔥 MOST IMPORTANT */
+}
+
+.about-intro{
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:15px;
+  opacity:0;
+  animation:fadeUp 1s ease forwards;
+  animation-delay:0.6s;
+}
+
+.about-desc{
+  font-size:16px;
+  line-height:1.8;
+  color:#ddd;
+  opacity:0;
+  animation:fadeUp 1s ease forwards;
+  animation-delay:1s;
+}
+
+/* SKILL TAGS */
+.about-tags{
+  margin-top:25px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.about-tags span{
+  padding:8px 18px;
+  border:1px solid orange;
+  border-radius:30px;
+  font-size:14px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.about-tags span:hover{
+  background:orange;
+  color:#111;
+  transform:translateY(-3px);
+  box-shadow:0 0 10px orange;
+}
+
+/* ANIMATIONS */
+@keyframes slideLeft{
+  from{opacity:0;transform:translateX(-60px);}
+  to{opacity:1;transform:translateX(0);}
+}
+
+@keyframes slideRight{
+  from{opacity:0;transform:translateX(60px);}
+  to{opacity:1;transform:translateX(0);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 20px rgba(255,179,71,0.4);}
+  50%{box-shadow:0 0 40px rgba(255,179,71,0.8);}
+  100%{box-shadow:0 0 20px rgba(255,179,71,0.4);}
+}
+
+/* RESPONSIVE */
+
+/* Small devices: phones */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .about-left {
+    width: 200px;
+    height: 200px;
+  }
+
+  .image-ring {
+    width: 200px;
+    height: 200px;
+    padding: 4px;
+  }
+
+  .about-intro {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .about-desc {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .about-tags {
+    justify-content: center;
+  }
+
+  .about-tags span {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+}
+
+/* Extra small devices: very small phones */
+@media (max-width: 480px) {
+  .about-left {
+    width: 160px;
+    height: 160px;
+  }
+
+  .image-ring {
+    width: 160px;
+    height: 160px;
+    padding: 3px;
+  }
+
+  .about-intro {
+    font-size: 14px;
+  }
+
+  .about-desc {
+    font-size: 12px;
+  }
+
+  .about-tags span {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+}

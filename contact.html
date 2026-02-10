@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="./Screenshot 2025-12-28 at 7.12.57 PM.png" type="image/x-icon">
+</head>
+
+<body> 
+
+    <section class="contact-section">
+  <h1>Contact <span>Me</span></h1>
+
+  <div class="contact-container">
+    
+    <!-- LEFT CONTENT -->
+    <div class="contact-info">
+      <h2>Let’s Work Together</h2>
+      <p>
+        Have a project idea or want to collaborate?  
+        Feel free to reach out. I’m always open to learning, building,
+        and creating meaningful web experiences.
+      </p>
+
+      <div class="info-box">
+        <p><strong style="color: #ffb703; font-weight: lighter;">Email:</strong> puratchidevir47@gmail.com</p>
+        <p><strong style="color: #ffb703; font-weight: lighter;">Phone:</strong> +91 6379113440</p>
+        <p><strong style="color: #ffb703; font-weight: lighter;">Location:</strong> India</p>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="contact-form">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<script>
+const hireBtn = document.querySelector('.btn-primary');
+hireBtn.addEventListener('click', () => {
+    window.location.href = "contact.html"; // go to contact page
+});
+</script>
+
+</body>
+
+    

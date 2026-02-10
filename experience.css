@@ -1,0 +1,233 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#0a0a0a;
+  color:#fff;
+}
+
+/* ======================
+   EXPERIENCE SECTION
+====================== */
+.experience-section{
+  padding:120px 10%;
+  background:
+    radial-gradient(circle at top left, rgba(255,183,3,0.08), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(255,77,0,0.08), transparent 40%),
+    #0a0a0a;
+}
+
+.exp-title{
+  text-align:center;
+  font-size:54px;
+  margin-bottom:110px;
+  font-weight:600;
+  letter-spacing:1px;
+}
+
+.exp-title span{
+  background:linear-gradient(90deg,#ffb703,#ff4d00);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ======================
+   TIMELINE
+====================== */
+.timeline{
+  position:relative;
+  display:flex;
+  justify-content:center;
+}
+
+.timeline-line{
+  position:absolute;
+  left:50%;
+  top:-60px;
+  width:3px;
+  height:130%;
+  background:linear-gradient(to bottom, transparent, #ffb703, transparent);
+  transform:translateX(-50%);
+  opacity:0.35;
+}
+
+/* ======================
+   EXPERIENCE CARD
+====================== */
+.experience-card{
+  max-width:980px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(18px);
+  border-radius:30px;
+  padding:65px;
+  position:relative;
+  box-shadow:
+    0 40px 90px rgba(0,0,0,0.85),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+  animation:fadeUp 1.2s ease forwards;
+}
+
+/* Badge */
+.exp-badge{
+  position:absolute;
+  top:-18px;
+  left:32px;
+  padding:8px 22px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ffb703,#ff4d00);
+  color:#000;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:0.4px;
+}
+
+/* Header */
+.exp-header{
+  margin-bottom:34px;
+}
+
+.exp-header h2{
+  font-size:34px;
+  font-weight:600;
+  color:#ffb703;
+}
+
+.exp-company{
+  color:#cfcfcf;
+  margin-top:8px;
+  font-size:16px;
+}
+
+.exp-year{
+  display:inline-block;
+  margin-top:10px;
+  font-size:13px;
+  color:#9a9a9a;
+}
+
+/* Description */
+.exp-desc{
+  font-size:16px;
+  line-height:1.95;
+  color:#e3e3e3;
+  margin-bottom:45px;
+}
+
+.exp-desc span{
+  color:#ffd166;
+  font-weight:500;
+}
+
+/* ======================
+   GRID CONTENT
+====================== */
+.exp-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  margin-bottom:45px;
+}
+
+.exp-box{
+  padding:18px 20px;
+  border-radius:18px;
+  background:
+    linear-gradient(140deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.01));
+  color:#ddd;
+  font-size:15px;
+  line-height:1.6;
+  transition:all 0.35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.exp-box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg, transparent, rgba(255,183,3,0.25), transparent);
+  opacity:0;
+  transition:0.4s;
+}
+
+.exp-box span{
+  background:linear-gradient(90deg,#ffd166,#4cc9f0);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:500;
+}
+
+.exp-box:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.7);
+}
+
+.exp-box:hover::before{
+  opacity:1;
+}
+
+/* ======================
+   TAGS
+====================== */
+.exp-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.exp-tags span{
+  padding:9px 20px;
+  border-radius:22px;
+  font-size:13px;
+  color:#ffb703;
+  border:1px solid rgba(255,183,3,0.35);
+  background:rgba(255,183,3,0.08);
+  transition:all 0.3s ease;
+}
+
+.exp-tags span:hover{
+  background:linear-gradient(135deg,#ffb703,#ff4d00);
+  color:#000;
+  transform:scale(1.1);
+}
+
+/* ======================
+   ANIMATION
+====================== */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(60px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media(max-width:768px){
+  .experience-section{
+    padding:90px 6%;
+  }
+
+  .exp-title{
+    font-size:42px;
+  }
+
+  .experience-card{
+    padding:42px 26px;
+  }
+
+  .exp-header h2{
+    font-size:26px;
+  }
+}

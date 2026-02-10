@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Puratchi Devi | Portfolio Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+  <!-- MAIN HEADING + EXPLANATION -->
+  <section class="projects-header">
+    <h1 class="heading">Projects</h1>
+    <p class="portfolio-note">
+      These projects were professionally developed during my work experience in a gaming company. 
+      They showcase my skills in game design, narrative writing, puzzle creation, and project documentation.
+    </p>
+  </section>
+
+  <!-- PROJECT GRID -->
+  <section class="projects-grid">
+
+    <div class="project-box">
+      <div class="project-content">
+        <h2>Mystery Legacy</h2>
+        <p class="project-type">Game Design & Narrative Writing</p>
+        <p>
+          Mystery Legacy was developed as part of my professional work experience. 
+          I contributed to game narratives, storylines, level ideas, and interactive content, 
+          presenting concepts effectively for production and documentation.
+        </p>
+      </div>
+    </div>
+
+    <div class="project-box">
+      <div class="project-content">
+        <h2>Scary Sneak</h2>
+        <p class="project-type">Game Design & Narrative Writing</p>
+        <p>
+          Scary Sneak focuses on puzzle design and mini-game mechanics, developed professionally during my work experience. 
+          The project highlights my ability to design engaging levels, integrate narratives, and maintain production-ready documentation.
+        </p>
+      </div>
+    </div>
+
+    <div class="project-box">
+      <div class="project-content">
+        <h2>Portfolio </h2>
+        <p class="project-type">Portfolio Web Project</p>
+        <p>
+          These are web portfolio projects demonstrating my skills in HTML, CSS, responsive design, and project presentation.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- JS for Animations -->
+  <script>
+    // Scroll animation for project boxes
+    const boxes = document.querySelectorAll('.project-box');
+
+    function checkBoxes() {
+      const triggerBottom = window.innerHeight / 1.1;
+      boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        if(boxTop < triggerBottom) {
+          box.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkBoxes);
+    window.addEventListener('load', checkBoxes);
+
+    // Heading letter animation
+    const heading = document.querySelector('.heading');
+    const letters = heading.textContent.split("");
+    heading.textContent = "";
+
+    letters.forEach(letter => {
+      const span = document.createElement('span');
+      span.textContent = letter;
+      span.classList.add('letter');
+      heading.appendChild(span);
+    });
+
+    let delay = 0;
+    document.querySelectorAll('.letter').forEach(span => {
+      span.style.animationDelay = `${delay}s`;
+      delay += 0.05;
+    });
+  </script>
+
+  
+
+</body>
+</html>
