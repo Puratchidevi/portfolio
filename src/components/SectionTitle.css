@@ -1,0 +1,25 @@
+.section-title {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 64px;
+}
+
+.section-title--center {
+  align-items: center;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    margin-bottom: 44px;
+  }
+}
